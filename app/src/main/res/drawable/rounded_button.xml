@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"> <!-- 직사각형 모양 설정 -->
+
+    <!-- 모서리 둥글게 설정 -->
+    <corners android:radius="16dp" />
+
+    <!-- (선택적) 경계선 추가 -->
+    <stroke
+        android:width="2dp"
+        android:color="#000000" /> <!-- 경계선 색상 및 두께 설정 -->
+</shape>

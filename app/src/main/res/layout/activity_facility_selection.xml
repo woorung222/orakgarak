@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top left button (7) -->
+    <Button
+        android:id="@+id/singing"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/karaoke"
+        app:layout_constraintBottom_toTopOf="@id/billiards"
+        app:layout_constraintEnd_toStartOf="@id/pcroom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Top right button (8) -->
+    <Button
+        android:id="@+id/pcroom"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/pc"
+        app:layout_constraintBottom_toTopOf="@id/bowling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/singing"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bottom left button (4) -->
+    <Button
+        android:id="@+id/billiards"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/billi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bowling"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/singing" />
+
+    <!-- Bottom right button (5) -->
+    <Button
+        android:id="@+id/bowling"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bowl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/billiards"
+        app:layout_constraintTop_toBottomOf="@id/pcroom" />
+
+    <TextView
+        android:id="@+id/singingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="노래방"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/singing"
+        app:layout_constraintStart_toStartOf="@+id/singing"
+        app:layout_constraintTop_toBottomOf="@+id/singing" />
+
+    <TextView
+        android:id="@+id/pcroomtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="피시방"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/pcroom"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="@+id/pcroom"
+        app:layout_constraintTop_toBottomOf="@+id/pcroom" />
+
+    <TextView
+        android:id="@+id/billiardstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="당구장"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/billiards"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="@+id/billiards"
+        app:layout_constraintTop_toBottomOf="@+id/billiards" />
+
+    <TextView
+        android:id="@+id/bowlingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="볼링장"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/bowling"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="@+id/bowling"
+        app:layout_constraintTop_toBottomOf="@+id/bowling" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

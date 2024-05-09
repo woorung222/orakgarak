@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">orakgarak</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">email</string>
+    <string name="prompt_password">비밀번호</string>
+    <string name="action_register">회원가입</string>
+    <string name="action_login">로그인</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="prompt_username">  아이디</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="title_activity_register_main">로그인</string>
+    <string name="title_activity_facility_selection">시설 선택</string>
+    <string name="image_desc">이미지 설명</string>
+</resources>
