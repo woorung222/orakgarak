@@ -47,7 +47,7 @@
             android:theme="@style/Theme.AppCompat"
             />
         <activity
-            android:name=".ui.facility.pcActivity"
+            android:name=".ui.facility.PcActivity"
             android:theme="@style/Theme.AppCompat"
             />
         <activity

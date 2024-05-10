@@ -17,7 +17,7 @@ class FacilitySelectionActivity : AppCompatActivity() {
             startActivity(Intent(this, SingingActivity::class.java))
         }
         findViewById<Button>(R.id.pcroom).setOnClickListener {
-            startActivity(Intent(this, pcActivity::class.java))
+            startActivity(Intent(this, PcActivity::class.java))
         }
         findViewById<Button>(R.id.billiards).setOnClickListener {
             startActivity(Intent(this, billiardsActivity::class.java))
