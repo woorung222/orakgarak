@@ -39,11 +39,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.facility.billiardsActivity"
+            android:name=".ui.facility.BilliardsActivity"
             android:theme="@style/Theme.AppCompat"
             />
         <activity
-            android:name=".ui.facility.bowlingActivity"
+            android:name=".ui.facility.BowlingActivity"
             android:theme="@style/Theme.AppCompat"
             />
         <activity

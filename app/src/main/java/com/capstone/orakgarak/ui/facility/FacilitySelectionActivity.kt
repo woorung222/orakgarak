@@ -20,10 +20,10 @@ class FacilitySelectionActivity : AppCompatActivity() {
             startActivity(Intent(this, PcActivity::class.java))
         }
         findViewById<Button>(R.id.billiards).setOnClickListener {
-            startActivity(Intent(this, billiardsActivity::class.java))
+            startActivity(Intent(this, BilliardsActivity::class.java))
         }
         findViewById<Button>(R.id.bowling).setOnClickListener {
-            startActivity(Intent(this, bowlingActivity::class.java))
+            startActivity(Intent(this, BowlingActivity::class.java))
         }
 
     }
