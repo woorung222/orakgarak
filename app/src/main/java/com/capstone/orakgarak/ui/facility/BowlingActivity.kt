@@ -1,11 +1,12 @@
 package com.capstone.orakgarak.ui.facility
 
-import MyListAdapter
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.orakgarak.R
+import com.capstone.orakgarak.model.Store
 
 class BowlingActivity : AppCompatActivity() {
 
@@ -22,14 +23,28 @@ class BowlingActivity : AppCompatActivity() {
 
         // 데이터 리스트 생성
         val itemList = listOf(
-            MyListAdapter.ItemData("Title 1", "Subtitle 1", R.drawable.icon),
-            MyListAdapter.ItemData("Title 2", "Subtitle 2", R.drawable.icon),
-            MyListAdapter.ItemData("Title 3", "Subtitle 3", R.drawable.icon)
+            MyListAdapter.ItemData(
+                "NULL", "NULL", R.drawable.icon,
+                Store(
+                    name = "NULL",
+                    address = "NULL",
+                    phone = "NULL",
+                    description = "Store 1 Description",
+                    hours = "NULL",
+                    amenities = "NULL",
+                    latitude = 37.5665,
+                    longitude = 126.9780
+                )
+            )
         )
 
         // 어댑터 생성 및 설정
-        adapter = MyListAdapter(itemList)
+        adapter = MyListAdapter(itemList) { item ->
+            val intent = Intent(this, DetailActivity::class.java).apply {
+                putExtra("STORE", item.store)
+            }
+            startActivity(intent)
+        }
         recyclerView.adapter = adapter
     }
 }
-

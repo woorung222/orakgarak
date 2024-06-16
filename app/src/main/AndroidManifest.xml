@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Orakgarak"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="9l7vyq712o" />
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_SECRET"
+            android:value="LIlPUvAwgOxeue8xAaA8R3kEirpkIByeFHPIl4vl" />
+
         <activity
             android:name=".ui.facility.FacilitySelectionActivity"
             android:exported="false"
@@ -34,34 +46,34 @@
             android:theme="@style/Theme.Orakgarak">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.facility.BilliardsActivity"
-            android:theme="@style/Theme.AppCompat"
-            />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".ui.facility.BowlingActivity"
-            android:theme="@style/Theme.AppCompat"
-            />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".ui.facility.PcActivity"
-            android:theme="@style/Theme.AppCompat"
-            />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".ui.facility.SingingActivity"
-            android:theme="@style/Theme.AppCompat"
-            />
-
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".ui.login.RegisterActivity"
             android:exported="false"
             android:label="Register"
-            android:theme="@style/Theme.AppCompat"
-            />
-
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".ui.MapActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".ui.facility.DetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
     </application>
 
 </manifest>

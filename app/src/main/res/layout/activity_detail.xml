@@ -1,0 +1,87 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_desc" />
+
+    <TextView
+        android:id="@+id/storeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="매장이름"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/storeAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="매장 주소"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/iconMap"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_map"
+            android:layout_marginStart="8dp"
+            android:contentDescription="지도 아이콘"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/storePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="매장 번호"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/storeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="영업 시설 및 시설 소개"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/storeHours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="매일 시간:시간 ~ 시간:시간"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/storeAmenities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="무선 인터넷, 흡연실"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/checkAvailabilityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="빈자리 확인하기"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

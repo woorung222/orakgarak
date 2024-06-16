@@ -16,4 +16,6 @@
     <string name="title_activity_register_main">로그인</string>
     <string name="title_activity_facility_selection">시설 선택</string>
     <string name="image_desc">이미지 설명</string>
+    <string name="search">검색</string>
+    <string name="상세페이지">영업 시설 및 시설 소개</string>
 </resources>

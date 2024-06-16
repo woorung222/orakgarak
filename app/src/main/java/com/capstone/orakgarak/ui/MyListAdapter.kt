@@ -1,3 +1,5 @@
+package com.capstone.orakgarak.ui.facility
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -5,28 +7,38 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.orakgarak.R
+import com.capstone.orakgarak.model.Store
 
-class MyListAdapter(private var items: List<ItemData>) : RecyclerView.Adapter<MyListAdapter.ViewHolder>() {
+class MyListAdapter(
+    private val itemList: List<ItemData>,
+    private val onItemClick: (ItemData) -> Unit
+) : RecyclerView.Adapter<MyListAdapter.MyViewHolder>() {
 
-    data class ItemData(var title: String, var subtitle: String, var imageResId: Int)
+    data class ItemData(
+        val title: String,
+        val subtitle: String,
+        val iconRes: Int,
+        val store: Store
+    )
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val imageView: ImageView = view.findViewById(R.id.imageView)
-        val textViewTitle: TextView = view.findViewById(R.id.textViewTitle)
-        val textViewSubtitle: TextView = view.findViewById(R.id.textViewSubtitle)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
+        return MyViewHolder(itemView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
-        return ViewHolder(view)
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val currentItem = itemList[position]
+        holder.titleTextView.text = currentItem.title
+        holder.subtitleTextView.text = currentItem.subtitle
+        holder.iconImageView.setImageResource(currentItem.iconRes)
+        holder.itemView.setOnClickListener { onItemClick(currentItem) }
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = items[position]
-        holder.imageView.setImageResource(item.imageResId)
-        holder.textViewTitle.text = item.title
-        holder.textViewSubtitle.text = item.subtitle
-    }
+    override fun getItemCount() = itemList.size
 
-    override fun getItemCount() = items.size
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val titleTextView: TextView = itemView.findViewById(R.id.textViewTitle)
+        val subtitleTextView: TextView = itemView.findViewById(R.id.textViewSubtitle)
+        val iconImageView: ImageView = itemView.findViewById(R.id.imageView)
+    }
 }
