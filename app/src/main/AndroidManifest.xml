@@ -54,6 +54,14 @@
             android:name=".ui.facility.SingingActivity"
             android:theme="@style/Theme.AppCompat"
             />
+
+        <activity
+            android:name=".ui.login.RegisterActivity"
+            android:exported="false"
+            android:label="Register"
+            android:theme="@style/Theme.AppCompat"
+            />
+
     </application>
 
 </manifest>
